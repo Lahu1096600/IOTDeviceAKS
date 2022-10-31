@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dotnet_nxt
+  name: dotnetnxt
   namespace: lahu2405
   labels:
-    app: dotnet_nxt
+    app: dotnetnxt
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dotnet_nxt
+      app: dotnetnxt
   template:
     metadata:
       labels:
-        app: dotnet_nxt
+        app: dotnetnxt
     spec:
       containers:
-        - name: dotnet_nxt
+        - name: dotnetnxt
           image: lahu2405arc.azurecr.io/lahu2405:#{Release.Artifacts.lahu2405.BuildId}#
          
           imagePullPolicy: Always
@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dotnet_nxt
+  name: dotnetnxt
 spec:
   type: LoadBalancer
   ports:
@@ -41,4 +41,4 @@ spec:
     - name: http51
       port: 5001
   selector:
-    app: dotnet_nxt
+    app: dotnetnxt
