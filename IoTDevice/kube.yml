@@ -17,8 +17,7 @@ spec:
     spec:
       containers:
         - name: dotnetnxt
-          image: lahu2405arc.azurecr.io/lahu2405:#{Release.Artifacts.lahu2405.BuildId}#
-         
+          image: lahu2405arc.azurecr.io/dotnetnxt:latest         
           imagePullPolicy: Always
 
           ports:
