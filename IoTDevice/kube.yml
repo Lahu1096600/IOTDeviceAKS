@@ -24,7 +24,7 @@ spec:
             - containerPort: 5000
             - containerPort: 5001
       imagePullSecrets:
-        - name: dotnetnxt
+        - name: lahu2405arc
 --- 
 
 ---
